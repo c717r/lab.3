@@ -1,0 +1,11 @@
+Lst = [972222222, 983333333, 965898364, 999999999]
+a = min(Lst)
+L = []
+for n in range(2, a//2+1):
+    if ~-2 ** n % n < 2:
+        while a%n == 0:
+            L.append(n)
+            a = a//n
+        if a == 1:
+            break
+print(*L)
